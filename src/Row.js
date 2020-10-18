@@ -1,12 +1,42 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
+import axios from "./axios"
+import "./Row.css"
 
-function Row({title}) {
+const base_url="https://image.tmdb.org/t/p/original"
+function Row({title,fetchURL}) {
 
-    const [movies,setMovies] =useState([])
+    const [movies,setMovies] = useState([]);
+
+    useEffect(()=>{
+
+        async function fetchdata(){
+            const req = await axios.get(fetchURL);
+            
+            setMovies(req.data.results);
+            return req;
+
+        }
+        fetchdata();
+
+    },[fetchURL]);
+    console.log(movies)
     return (
-        <div>
+        <div className="row">
             <h2>{title}</h2>
-            {/* container poster */}
+            <div className="row_posters">
+                {movies.map(movie =>{
+                    return(
+                    <img 
+                    key={movie.id}
+                    className="row_poster"
+                    src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+
+                    )
+                })}
+
+            </div>
+            
+            
             
         </div>
     )

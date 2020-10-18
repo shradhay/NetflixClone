@@ -6,10 +6,10 @@ import request from "./request"
 function App() {
   return (
     <div className="App">
-     <h1>Netflix clone</h1>
-     <Row title="NETFLIX Original" fetchURL={request.fetchNetflixOriginal}/>
+     <h1>NETFLIX</h1>
+     <Row title="Netflix Original" fetchURL={request.fetchNetflixOriginal}/>
      <Row title="Trending Now"  fetchURL={request.fetchTrending}/>
-
+     
     </div>
   );
 }
