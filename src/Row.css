@@ -1,4 +1,5 @@
 .row {
+  margin-right: 30px;
 }
 .row_posters {
   display: flex;
@@ -18,4 +19,12 @@
 }
 .row_poster:hover {
   transform: scale(1.08);
+}
+.row_posterLarge {
+  max-height: 250px;
+  padding-right: 3px;
+}
+.row_posterLarge {
+  transform: scale(1.09);
+  opacity: 1;
 }
