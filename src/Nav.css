@@ -7,11 +7,16 @@
 
   width: 100%;
   z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
 }
 .navlogo {
+  position: fixed;
+  left: 20px;
   width: 150px;
   object-fit: contain;
 }
 .nav_black {
   background-color: #111;
+  height: 50px;
 }
