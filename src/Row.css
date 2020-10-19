@@ -21,11 +21,17 @@
 .row_poster:hover {
   transform: scale(1.08);
 }
+
 .row_posterLarge {
   max-height: 250px;
   padding-right: 3px;
-}
-.row_posterLarge {
-  transform: scale(1.09);
+
   opacity: 1;
+  margin-right: 10px;
+  padding: 5px;
+  transition: transform 550ms;
+  width: 100%;
+}
+.row_posterLarge:hover {
+  transform: scale(1.08);
 }
